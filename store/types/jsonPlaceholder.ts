@@ -10,7 +10,7 @@ export interface IUser {
 }
 
 export interface IPost {
-  postId: number
+  userId: number
   id: number 
   title: string 
   body: string

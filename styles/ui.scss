@@ -49,8 +49,8 @@
   min-width: 376px;
   padding-bottom: 30px;
   border-left: var(--border);
-  background-color: var(--bg_primary);
-
+  background-color: var(--bg_secondary);  
+  animation: info_animation ease 0.8s;
   &__title {
     font-size: 18px;
     font-weight: 600;
@@ -69,7 +69,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     border-bottom: var(--border);
-    background-color: var(--bg_primary);
+    background-color: var(--bg_secondary);
 
     &__name {
       margin-bottom: 3px;
@@ -92,14 +92,16 @@
   }
 
   &__btn {
+    margin-left: 26px;
+    margin-top: 26px;
+    cursor: pointer;
     padding: 13px 30px;
     border-radius: var(--bradius);
-
     background-color: var(--primary);
     color: var(--btn_text);
     font-size: 16px;
     transition: all ease 0.5s;
-    border: none;
+    border: 1px solid var(--primary);
 
     display: flex;
     align-items: center;
@@ -137,14 +139,14 @@
     margin-bottom: 0;
   }
 
-  &-list {
-    
-  }
-
   &__title {
     color: var(--text);
     font-size: 20px;
     margin-bottom: 1px;
+    &_post {
+      padding-bottom: 5px;
+      border-bottom: var(--border);
+    }
   }
 
   &__descr {
@@ -157,5 +159,56 @@
   &__link {
     color: var(--primary);
     font-size: 16px;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  &-comments {
+    margin-top: 13px;
+    &-enter {
+      opacity: 0;
+      transform: translate(0, -15px);
+    }
+    &-enter-active {
+      opacity: 1;
+      transform: translate(0, 0);
+      transition: all 500ms ease-in;
+    } 
+    &-exit {
+      opacity: 1;
+    }
+    &-exit-active  {
+      opacity: 0;
+      transform: translate(0, -15px);
+      transition: all 300ms ease-out;
+    } 
+  }
+
+  &-comment {
+    margin-bottom: 18px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &__title {
+      font-size: 16px;
+      color: var(--text);
+    }
+    &__descr {
+      color: var(--secondary);
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}
+
+@keyframes info_animation {
+  0% {
+    transform: translate(45px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
   }
 }

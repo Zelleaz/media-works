@@ -10,7 +10,12 @@ export const ActiveLink: React.FC<IActiveLinkProps> = ({href, children ,activeCl
     router.push(href)
   }, [router, href])
 
-  const isCurrentPath = router.pathname === href || router.asPath === href
+  let reg
+  if (href === '/posts') {
+    reg = new RegExp(/\/posts\/\d/)
+  }
+
+  const isCurrentPath = router.pathname === href || router.asPath === href || reg?.test(router.asPath)
 
   useEffect(() => {
     if (typeof window !== 'undefined') {

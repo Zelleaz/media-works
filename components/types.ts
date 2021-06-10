@@ -1,4 +1,4 @@
-import { IUser } from "../store/types/jsonPlaceholder";
+import { IPost, IUser } from "../store/types/jsonPlaceholder";
 
 export type CardProps = IUser
 
@@ -17,3 +17,5 @@ export interface IInfoParserProps {
   myKey: string
   value: string
 }
+
+export type PostProps = IPost
