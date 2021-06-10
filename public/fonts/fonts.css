@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Whitney';
+  src: url('./SemiBold/Whitney-Semibold.eot');
+  src: local('./SemiBold/Whitney Semibold Regular'), local('./SemiBold/Whitney-Semibold'),
+        url('./SemiBold/Whitney-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('./SemiBold/Whitney-Semibold.woff') format('woff'),
+        url('./SemiBold/Whitney-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Whitney Book';
+  src: url('./Book/Whitney-Book.eot');
+  src: local('./Book/Whitney Book Regular'), local('./Book/Whitney-Book'),
+      url('./Book/?#iefix') format('embedded-opentype'),
+      url('./Book/Whitney-Book.woff') format('woff'),
+      url('./Book/Whitney-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

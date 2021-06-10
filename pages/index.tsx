@@ -26,7 +26,7 @@ const Index: NextPage<{users: IUser[], posts: IPost[]}> = ({ users, posts }) => 
         
         <CardsList users={users} />
       </div>
-      {currentUser && <Info />}
+      {currentUser.id !== 0 && <Info />}
     </div>
   );
 }

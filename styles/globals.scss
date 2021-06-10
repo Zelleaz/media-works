@@ -1,9 +1,30 @@
+@font-face {
+  font-family: 'Whitney';
+  src: url('/fonts/SemiBold/Whitney-Semibold.eot');
+  src: local('/fonts/SemiBold/Whitney Semibold Regular'), local('/fonts/SemiBold/Whitney-Semibold'),
+        url('/fonts/SemiBold/Whitney-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/SemiBold/Whitney-Semibold.woff') format('woff'),
+        url('/fonts/SemiBold/Whitney-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Whitney';
+  src: url('/fonts/Book/Whitney-Book.eot');
+  src: local('/fonts/Book/Whitney Book Regular'), local('/fonts/Book/Whitney-Book'),
+      url('/fonts/Book/?#iefix') format('embedded-opentype'),
+      url('/fonts/Book/Whitney-Book.woff') format('woff'),
+      url('/fonts/Book/Whitney-Book.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Whitney';
   overflow: hidden;
 }
 
