@@ -3,7 +3,29 @@ import { IUsersState, UsersAction, usersActionTypes } from "../types/redux/reduc
 
 const initialState: IUsersState = {
   users: [],
-  currentUser: null,
+  currentUser: {
+    address: {
+      city: '',
+      geo: {
+        lat: '',
+        lng: ''
+      },
+      street: '',
+      suite: '',
+      zipcode: ''
+    },
+    company: {
+      bs: '',
+      catchPhrase: '',
+      name: ''
+    },
+    email: '',
+    id: 0,
+    name: '',
+    phone: '',
+    username: '',
+    website: ''
+  },
   loading: false
 }
 

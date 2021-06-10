@@ -15,6 +15,6 @@ export type UsersAction = LoadUsers | LoadUserInfo | ToggleLoading
 
 export interface IUsersState {
   users: IUser[]
-  currentUser?: IUser
+  currentUser: IUser
   loading: boolean
 }

@@ -1,6 +1,6 @@
 import { NextPage } from 'next'
 import { useRouter } from 'next/dist/client/router'
-import React, { useEffect, useLayoutEffect } from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { getPosts, getUsers } from '../../api/api'
 import { Info } from '../../components/Info/Info'
@@ -20,11 +20,9 @@ const PostWithParams: NextPage<{propsPosts: IPost[], propsUsers: IUser[]}> = ({ 
   const { userId } = router.query
   const id: string = userId?.toString() ?? ''
 
-  useLayoutEffect(() => {
-    if (posts.length === 0 && users.length === 0) {
-      dispatch(loadPostsCreator(propsPosts))
-      dispatch(loadUsersCreator(propsUsers))
-    }
+  useEffect(() => {
+    dispatch(loadPostsCreator(propsPosts))
+    dispatch(loadUsersCreator(propsUsers))
   }, [])
 
   useEffect(() => {
@@ -36,10 +34,11 @@ const PostWithParams: NextPage<{propsPosts: IPost[], propsUsers: IUser[]}> = ({ 
     }
   }, [users])
 
-  
+  useEffect(() => {
+    preparedPosts = posts.filter(post => post.userId === parseInt(id))
+  }, [posts])
 
-
-  const preparedPosts = posts.filter(post => post.userId === parseInt(id))
+  let preparedPosts = propsPosts.filter(post => post.userId === parseInt(id))
 
   return (
     <div className="container">
