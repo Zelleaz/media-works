@@ -26,6 +26,24 @@ body {
   margin: 0;
   font-family: 'Whitney';
   overflow: hidden;
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 15px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #DDDDDF;
+    border-radius: 15px;
+  }
+  ::-webkit-scrollbar-thumb:hover{
+    background: var(--primary);
+    
+  }
+  ::-webkit-scrollbar-track{
+    background: #f0f0f2;
+    border-radius: 15px;
+    box-shadow: inset 7px 10px 12px #f0f0f0;
+  }
 }
 
 a {
